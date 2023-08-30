@@ -6,10 +6,11 @@
  *   - 2e colmun: Stef?
  * replace pin numbers by the ones you use
  ******************************************************************/
-#define PS2_DAT        13  //14    
-#define PS2_CMD        11  //15
-#define PS2_SEL        10  //16
-#define PS2_CLK        12  //17
+// ESP32 VSPI
+#define PS2_DAT        19   
+#define PS2_CMD        23 
+#define PS2_SEL        5 
+#define PS2_CLK        18  
 
 /******************************************************************
  * select modes of PS2 controller:
@@ -34,7 +35,7 @@ byte vibrate = 0;
 
 void setup(){
  
-  Serial.begin(57600);
+  Serial.begin(115200);
   
   delay(300);  //added delay to give wireless ps2 module some time to startup, before configuring it
    
